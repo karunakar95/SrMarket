@@ -1,0 +1,26 @@
+<!-- <div class="app-container" [ngClass]="{'keyboard-user': keyboardUser}" (mouseup)="keyboardUser = false"
+  (keydown.tab)="keyboardUser = true">
+  <seed-nav></seed-nav>
+  <main role="main" class="page-content" [ngClass]="{'footer-hidden': hideFooter, 'padding-top': backTo}"
+    accBackButtonHandler="acc-back-btn;acc-close-btn">
+    <div class="main-content" tabindex="-1" aria-labelledby="content-title">
+      <div class="back-header" *ngIf="backTo">
+        <a class="icon-button back-button" [routerLink]="backTo" [queryParams]="backToParams" aria-label="Go back"
+          setFocusTo=".main-content" id="acc-back-btn">
+          <i class="chevron-left-white"></i>
+        </a>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <seed-footer *ngIf="!hideFooter"></seed-footer>
+  <seed-report-an-issue *ngIf="hideReportIssue"></seed-report-an-issue>
+</div> -->
+<div class="app-container">
+  <app-topnav></app-topnav>
+<main class="page-content">
+  <p>MAIN</p>
+</main>
+<app-footer></app-footer>
+
+</div>
