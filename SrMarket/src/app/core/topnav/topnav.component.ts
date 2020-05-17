@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
+  navList : any [];
+  signInOptions : any [];
   constructor() { }
 
   ngOnInit() {
+    this.navList = ['Products', 'Deals', 'About', 'Contact'];
+    this.signInOptions = ['LogIn', 'SignIn', 'Cart'];
   }
 
 }
