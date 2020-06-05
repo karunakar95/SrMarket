@@ -1,26 +1,25 @@
-<!-- <div class="app-container" [ngClass]="{'keyboard-user': keyboardUser}" (mouseup)="keyboardUser = false"
-  (keydown.tab)="keyboardUser = true">
-  <seed-nav></seed-nav>
-  <main role="main" class="page-content" [ngClass]="{'footer-hidden': hideFooter, 'padding-top': backTo}"
-    accBackButtonHandler="acc-back-btn;acc-close-btn">
-    <div class="main-content" tabindex="-1" aria-labelledby="content-title">
-      <div class="back-header" *ngIf="backTo">
-        <a class="icon-button back-button" [routerLink]="backTo" [queryParams]="backToParams" aria-label="Go back"
-          setFocusTo=".main-content" id="acc-back-btn">
-          <i class="chevron-left-white"></i>
-        </a>
-      </div>
-      <router-outlet></router-outlet>
-    </div>
-  </main>
-  <seed-footer *ngIf="!hideFooter"></seed-footer>
-  <seed-report-an-issue *ngIf="hideReportIssue"></seed-report-an-issue>
-</div> -->
 <div class="app-container">
   <app-topnav></app-topnav>
 <main class="page-content">
-  <p>MAIN</p>
+<router-outlet></router-outlet>
+<p>---Sorting---</p>
+
+  <table [ngStyle]= "{'border':'1px solid black'}">
+    <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByName(arr)">Name:</th>
+    <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByAge(arr)">Age:</th>
+    <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByDob(arr)">Dob:</th>
+   <tr> <td [ngStyle]= "{'border': '1px solid black'}"> <div *ngFor="let item of arr">{{item.name}}</div> </td>
+        <td [ngStyle]= "{'border': '1px solid black'}"> <div *ngFor="let item of arr">{{item.age}}</div> </td>
+        <td [ngStyle]= "{'border': '1px solid black'}"> <div *ngFor="let item of arr">{{item.dob}}</div>
+  </tr>
+      </table>
+
+    <!-- <span> {{item.name}}</span> &nbsp;,
+    <span>{{item.age}}</span> &nbsp;,
+  <span>{{item.dob}}</span> &nbsp; -->
+
+
+
 </main>
 <app-footer></app-footer>
-
 </div>
