@@ -1,0 +1,32 @@
+
+.loginWrapper {
+  position: absolute;
+    top: calc(50vh - 104px);
+    left: 40%;
+    border: 1px solid lightgreen;
+    padding: 50px;
+    list-style: none;
+    border-radius: 30px;
+}
+
+.app-logo {
+  text-align: center;
+  background: linear-gradient(#e66465, #9198e5);
+  color: white;
+  font-family: cursive;
+  border-radius: 5px;
+}
+li {
+margin-bottom: 15px;
+}
+button {
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+.UserName, .Password {
+font-family: cursive;
+}
+.passwordSpan{
+  padding-left: 10px;
+}

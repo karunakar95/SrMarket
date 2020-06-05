@@ -1,11 +1,15 @@
 <nav class="top-nav">
   <div class="top-nav-container">
   <ul class="nav-list">
-   <li class="nav-list-item" *ngFor="let item of navList">{{item}}</li>
+   <li><a class="nav-list-item" [routerLink] = "['/home/app-products']" routerLinkActive="active">Products</a></li>
+   <li><a class="nav-list-item" [routerLink] = "['/home/app-deals']" routerLinkActive="active">Deals</a></li>
+   <li><a class="nav-list-item">About</a></li>
+   <li><a class="nav-list-item">Contact</a></li>
   </ul>
-  <div class="logo">SR Market Place</div>
+  <div class="logo">Angular TEST</div>
   <ul class="sign-in-options">
   <li class="nav-list-item" *ngFor="let item of signInOptions">{{item}}</li>
+  <li class="nav-list-item" (click) = "logout()">Logout</li>
   </ul>
   </div>
 </nav>
