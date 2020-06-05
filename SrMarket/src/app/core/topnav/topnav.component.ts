@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-topnav',
@@ -7,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  navList : any [];
+
   signInOptions : any [];
-  constructor() { }
+  constructor(
+    public router : Router
+  ) { }
 
   ngOnInit() {
-    this.navList = ['Products', 'Deals', 'About', 'Contact'];
+
     this.signInOptions = ['LogIn', 'SignIn', 'Cart'];
+  }
+
+  logout(){
+  this.router.navigate(['/app-login']);
   }
 
 }
