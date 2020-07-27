@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './home/login/login.component';
 import { ProductsComponent } from './home/products/products.component';
 import { DealsComponent } from './home/deals/deals.component';
+import { ParentComponent } from './home/parent/parent.component';
+import { ChildComponent } from './home/child/child.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,16 +20,19 @@ import { DealsComponent } from './home/deals/deals.component';
     HomeComponent,
     LoginComponent,
     ProductsComponent,
-    DealsComponent
+    DealsComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
