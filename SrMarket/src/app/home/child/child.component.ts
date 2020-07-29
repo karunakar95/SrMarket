@@ -33,13 +33,15 @@ export class ChildComponent implements OnInit, OnChanges {
   activeAlerts = ['Alert1','Alert2','Alert3','Alert4','Alert5'];
   animate : boolean;
   dismissedAlerts : any[] = [];
+  Recommendations : any;
+  programTasks: any;
 
 
   constructor(
     public recommended : RecommendationserviceService,
     private cdr : ChangeDetectorRef) {
 
-    console.log('Child Constructor!!');
+    //console.log('Child Constructor!!');
   }
 
   get ActivealertList() {
@@ -51,16 +53,35 @@ return filteredAlerts;
 
   ngOnInit() {
 
+    this.programTasks = [
+      {
+        title: "program1",
+        Desc : "Test Program1"
+      },
+      {
+        title: "program2",
+        Desc : "Test Program2"
+      },
+      {
+        title: "program3",
+        Desc : "Test Program3"
+      },
+      {
+        title: "program4",
+        Desc : "Test Program4"
+      }
+
+    ]
     const myObservable = of(1,2,3,4);
 
     myObservable.subscribe({
       next: res => {
-        console.log('myObservable values==',res);
+       // console.log('myObservable values==',res);
 
       }
     })
 
-    console.log('Child NgOnInIt!!');
+   // console.log('Child NgOnInIt!!');
     this.title = 'Tour of Heroes';
     this.heroes = [{
       "name" : "karunakar",
@@ -84,6 +105,9 @@ return filteredAlerts;
   const recsubscription =  this.recommended.data$.subscribe({
     next: res => {
       console.log('result', res);
+      this.Recommendations = res.recommendations;
+     // console.log('REÉ',this.Recommendations);
+
     },
 
     error: err => {
@@ -91,7 +115,7 @@ return filteredAlerts;
     },
 
     complete: () => {
-console.log('completed');
+//console.log('completed');
 
     }
   })
@@ -102,7 +126,7 @@ console.log('completed');
 
   useingrxjsfrom.subscribe({
     next : res => {
-      console.log('Using RXJS from',res);
+    //  console.log('Using RXJS from',res);
     }
   })
 
@@ -112,7 +136,7 @@ console.log('completed');
 
   this.intervalsubscription = conterobservable.subscribe({
     next : res => {
-      console.log(`its been ${res} seconds from subscribing`);
+     // console.log(`its been ${res} seconds from subscribing`);
     }
   })
 
@@ -121,13 +145,13 @@ setTimeout(() => {
 }, 10000);
 
 const el = document.getElementById('myelement');
-console.log('element', el);
+//console.log('element', el);
 
 const ajaxre =  ajax('../assets/Recommendations.json');
 
 ajaxre.subscribe({
   next : res => {
-    console.log('AJAX RES==', res);
+  //  console.log('AJAX RES==', res);
 
   }
 })
@@ -136,14 +160,14 @@ ajaxre.subscribe({
   }
 
   ngOnChanges() {
-    console.log('data got passed from Parent to Child!', this.data);
-    console.log('Child NgOnChanges!!');
+   // console.log('data got passed from Parent to Child!', this.data);
+   // console.log('Child NgOnChanges!!');
   }
 
   openAddress(addressHtml: HTMLElement) {
 
-    console.log('HTML ELE', addressHtml
-    );
+    //console.log('HTML ELE', addressHtml
+   // );
   }
 
   closingAlert(alert) {
@@ -151,6 +175,6 @@ ajaxre.subscribe({
     this.cdr.detectChanges();
     this.animate = false;
     this.dismissedAlerts.push(alert);
-    console.log('Dimsmissed Alerts', this.dismissedAlerts);
+   // console.log('Dimsmissed Alerts', this.dismissedAlerts);
   }
 }

@@ -18,3 +18,41 @@ TEST For *ngIF
       </button>
       </div>
   </div>
+
+  <div class="program-tasks-section">
+    <h2 class="program-tasks-section-title">
+      Program Tasks
+    </h2>
+    <div class="program-tasks-section-content">
+      <ul class="list">
+        <li class="list-content" *ngFor="let program of programTasks">
+          <a class="list-item">
+            <div class="list-content">
+            <h3 class="list-content-title">{{program.title}} </h3>
+            <p class="sub-title">{{program.Desc}}</p>
+            </div>
+          </a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="recommended-section">
+  <h2 class="recommended-section-title">Recommended</h2>
+  <div class="recommended-main">
+    <ul class="list recommendation-list">
+     <li *ngFor="let recommendation of Recommendations | slice : 0:4">
+       <a class="list-item">
+     <div class="list-content">
+       <small class="list-content-caption">COLLECTION</small>
+    <h3 class="list-content-title"> {{recommendation.title}}</h3>
+     </div>
+     <div class="list-coll-image">
+     <img [src]="recommendation.portraitImageURL" alt="recommendation.title">
+     </div>
+     </a>
+     </li>
+    </ul>
+  </div>
+  </div>
