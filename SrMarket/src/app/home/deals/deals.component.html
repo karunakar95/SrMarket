@@ -1,58 +1,69 @@
-<div class="alert-container">
-  <div class="alert-wrapper"
-  *ngFor = "let alert of ActivealertList"
-  [@dismissAnimation]="animate?'active': 'inactive'">
-  {{alert}}
-  <button (click) = "closingAlert(alert)"> X
-  </button>
+<div class="content-page-wrapper">
+
+  <div class="content-page-header">
+    <div class="content-page-title">
+      <h3>ForYou</h3>
+    </div>
+  </div>
+
+
+  <div class="alert-container">
+    <div class="alert-wrapper"
+    *ngFor = "let alert of ActivealertList"
+    [@dismissAnimation]="animate?'active': 'inactive'">
+    {{alert}}
+    <button (click) = "closingAlert(alert)"> X
+    </button>
+    </div>
+  </div>
+
+  <div class="program-tasks-section">
+  <h2 class="program-tasks-section-title">
+    Program Tasks
+  </h2>
+  <div class="program-tasks-section-content">
+    <ul class="list">
+      <li class="list-content" *ngFor="let program of programTasks">
+        <a class="list-item">
+          <div class="list-content">
+          <h3 class="list-content-title">{{program.title}} </h3>
+          <p class="sub-title">{{program.Desc}}</p>
+          </div>
+        </a>
+
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="recommended-section">
+  <h2 class="recommended-section-title">Recommended</h2>
+  <div class="recommended-main">
+  <ul class="list recommendation-list">
+   <li *ngFor="let recommendation of Recommendations | slice : 0:4">
+     <a class="list-item">
+   <div class="list-content">
+     <small class="list-content-caption">COLLECTION</small>
+  <h3 class="list-content-title"> {{recommendation.title}}</h3>
+   </div>
+   <div class="list-coll-image">
+   <img [src]="recommendation.portraitImageURL" alt="recommendation.title">
+   </div>
+   </a>
+   </li>
+  </ul>
+  </div>
+  </div>
+
+  <div class="leaderboard-section">
+  <h2 class="leaderboard-section-title">Leaderboards</h2>
+  <ul class="leaderboard-list">
+    <li class="leaderboard-card" *ngFor="let leaderboard of leaderboardsList">
+        <h3 class="list-content-title leaderboard-card-title"> {{leaderboard.title}} </h3>
+        <span class="leaderboard-date"> {{leaderboard.startDate}} - {{leaderboard.endDate}} </span>
+       <div class="leaderboard-rank">Rank#{{leaderboard.rank}}</div>
+    </li>
+  </ul>
   </div>
 </div>
 
-<div class="program-tasks-section">
-<h2 class="program-tasks-section-title">
-  Program Tasks
-</h2>
-<div class="program-tasks-section-content">
-  <ul class="list">
-    <li class="list-content" *ngFor="let program of programTasks">
-      <a class="list-item">
-        <div class="list-content">
-        <h3 class="list-content-title">{{program.title}} </h3>
-        <p class="sub-title">{{program.Desc}}</p>
-        </div>
-      </a>
-
-    </li>
-  </ul>
-</div>
-</div>
-
-<div class="recommended-section">
-<h2 class="recommended-section-title">Recommended</h2>
-<div class="recommended-main">
-<ul class="list recommendation-list">
- <li *ngFor="let recommendation of Recommendations | slice : 0:4">
-   <a class="list-item">
- <div class="list-content">
-   <small class="list-content-caption">COLLECTION</small>
-<h3 class="list-content-title"> {{recommendation.title}}</h3>
- </div>
- <div class="list-coll-image">
- <img [src]="recommendation.portraitImageURL" alt="recommendation.title">
- </div>
- </a>
- </li>
-</ul>
-</div>
-</div>
-
-<div class="leaderboard-section">
-<h2 class="leaderboard-section-title">Leaderboards</h2>
-<ul class="leaderboard-list">
-  <li class="leaderboard-card" *ngFor="let leaderboard of leaderboardsList">
-      <h3 class="list-content-title leaderboard-card-title"> {{leaderboard.title}} </h3>
-      <span class="leaderboard-date"> {{leaderboard.startDate}} - {{leaderboard.endDate}} </span>
-     <div class="leaderboard-rank">Rank#{{leaderboard.rank}}</div>
-  </li>
-</ul>
-</div>

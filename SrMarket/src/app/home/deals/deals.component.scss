@@ -15,6 +15,27 @@
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
+.content-page-wrapper {
+  background-color: #efeff4;
+  min-height: calc(100vh - 160px);
+  max-width: none;
+
+  .content-page-header {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding-top: 20px;
+    max-width: 672px;
+    margin: auto;
+
+    .content-page-title {
+      font-size: 34px;
+      line-height: 41px;
+      //padding-bottom: 17px;
+      margin: 0;
+      transition: all 150ms;
+    }
+  }
+}
 
 .alert-container {
   width: 100%;

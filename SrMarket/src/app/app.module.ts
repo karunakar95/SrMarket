@@ -15,6 +15,7 @@ import { ParentComponent } from './home/parent/parent.component';
 import { ChildComponent } from './home/child/child.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './home/about/about.component';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutComponent } from './home/about/about.component';
     DealsComponent,
     ParentComponent,
     ChildComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
