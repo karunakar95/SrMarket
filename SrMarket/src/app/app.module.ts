@@ -16,6 +16,7 @@ import { ChildComponent } from './home/child/child.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
+import { DiscoverSpotlightsComponent } from './home/discover-spotlights/discover-spotlights.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactComponent } from './home/contact/contact.component';
     ParentComponent,
     ChildComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    DiscoverSpotlightsComponent
   ],
   imports: [
     BrowserModule,

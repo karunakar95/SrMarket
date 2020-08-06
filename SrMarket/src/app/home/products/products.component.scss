@@ -68,6 +68,35 @@
     }
    }
 
+   .morefrom-spotlight-container {
+   max-width: 1000px;
+   margin: auto;
+   display: flex;
+   justify-content: flex-end;
+
+   .morefrom {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(60, 60, 67, 0.6);
+   }
+
+   .spotlight {
+     color: green;
+     font-size: 15px;
+     font-weight: 600;
+     margin-left: 8px;
+     cursor: pointer;
+
+   .right-arrow {
+    border: 1px solid green;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+   }
+   }
+  }
+
    .collection-container {
      .collection-header {
        &-title {
