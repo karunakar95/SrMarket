@@ -1,0 +1,72 @@
+.content-page-wrapper {
+  background-color: #efeff4;
+  min-height: calc(100vh - 160px);
+  max-width: none;
+
+  .content-page-header {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding-top: 20px;
+    max-width: 672px;
+    margin: auto;
+
+    .content-page-title {
+      font-size: 34px;
+      line-height: 41px;
+      padding-bottom: 17px;
+      margin: 0;
+      transition: all 150ms;
+    }
+  }
+
+  .content-page-body {
+    .saved-content-section {
+      max-width: 672px;
+      margin: auto;
+
+      .saved-content-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        .saved-content-list-item {
+          display: flex;
+          border-bottom: 1px solid rgba(198, 198, 200, 0.5);
+          .saved-item-content {
+            flex: 1;
+            &-title {
+              padding: 10px;
+              margin: 0;
+              font-size: 17px;
+              font-weight: 600;
+              line-height: 22px;
+            }
+            .time-and-competed {
+              color: #6d6d71;
+              padding: 10px;
+              margin-top: 34px;
+            }
+          }
+          .saved-item-image {
+            height: 80px;
+            width: 80px;
+            position: relative;
+            margin: 20px 0px;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 4px;
+            overflow: hidden;
+            border: solid 1px rgba(198, 198, 200, 0.5);
+            background-color: #ffffff;
+
+            img{
+        width: 100%;
+        object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

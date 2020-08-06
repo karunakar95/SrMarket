@@ -1,3 +1,32 @@
-<p>
-  products works!
-</p>
+<div class="content-page-wrapper">
+  <div class="content-page-header">
+    <div class="content-page-title">
+     <h1>Discover</h1>
+    </div>
+  </div>
+  <div class="content-page-body">
+    <section class="spotlights">
+      <div class="spotlights-container">
+    <div class="spotlight-card" href="#" *ngFor="let spotlight of spotlights| slice:0:4">
+      <img src="{{spotlight.imageUrl}}" alt="Spotlight-Image">
+      <div class="spotlight-title-container">
+        <h5 class="spotlight-card-desc">{{spotlight.description}}</h5>
+        <h3 class="spotlight-card-title">{{spotlight.title}}</h3>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section class="collection-container">
+      <div class="collection-header">
+        <h3 class="collection-header-title">Collection</h3>
+      </div>
+      <div class="collection-list">
+        <div href="" class="collection-card" *ngFor="let collection of collectionList">
+          <img src="{{collection.imageUrl}}" alt="Collection-Image">
+         <div class="collection-title">{{collection.title}}</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
