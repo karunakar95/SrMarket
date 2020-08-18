@@ -17,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { DiscoverSpotlightsComponent } from './home/discover-spotlights/discover-spotlights.component';
+import { MiscComponent } from './home/misc/misc.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DiscoverSpotlightsComponent } from './home/discover-spotlights/discover
     ChildComponent,
     AboutComponent,
     ContactComponent,
-    DiscoverSpotlightsComponent
+    DiscoverSpotlightsComponent,
+    MiscComponent
   ],
   imports: [
     BrowserModule,
