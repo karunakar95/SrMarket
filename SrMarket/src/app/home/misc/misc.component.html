@@ -1,3 +1,27 @@
-<p>
-  misc works!
-</p>
+<div class="content-page-wrapper">
+  <div class="content-page-header">
+<div class="content-page-title">
+  <h3>MISC</h3></div>
+  </div>
+  <div class="content-page-body">
+
+    <!-- table -->
+<section class="table-container">
+  <table>
+    <tr>
+      <th *ngFor="let column of headers" (click) = "sortBy(column)">
+        {{column}}
+      </th>
+    </tr>
+    <tr *ngFor = "let student of studentData">
+      <td *ngFor = "let header of headers">
+        {{student[header]}}
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
+  </div>
+</div>
