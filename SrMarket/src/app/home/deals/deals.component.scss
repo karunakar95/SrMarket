@@ -1,0 +1,245 @@
+.odd {
+  color:red
+}
+
+.even {
+  color:blue
+}
+
+.first {
+  background-color: blueviolet;
+}
+
+.last {
+  background-color: burlywood;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.content-page-wrapper {
+  background-color: #efeff4;
+  min-height: calc(100vh - 160px);
+  max-width: none;
+
+  .content-page-header {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding-top: 20px;
+    max-width: 672px;
+    margin: auto;
+
+    .content-page-title {
+      font-size: 34px;
+      line-height: 41px;
+      //padding-bottom: 17px;
+      margin: 0;
+      transition: all 150ms;
+    }
+  }
+}
+
+.alert-container {
+  width: 100%;
+  height: 100px;
+  max-width: 672px;
+  margin: auto;
+  position: relative;
+  margin-top:70px;
+
+  .alert-wrapper {
+  position: absolute;
+  width : 100%;
+  height: 100px;
+  border-radius: 10px;
+  background-color:#f5f5f5;
+  transform: scale(0.93);
+  top : -24px;
+
+  &:nth-child(1){
+    z-index: 10;
+    top: 0;
+    background-color: white;
+    transform: scale(1);
+  }
+
+  &:nth-child(2){
+    z-index: 9;
+    top: -12px;
+    background-color: #fafafa;
+    transform: scale(0.97);
+  }
+
+  &:nth-child(n+4){
+    display: none;
+  }
+  }
+}
+
+.program-tasks-section {
+  max-width: 672px;
+  width: 100%;
+  margin: auto;
+
+  &-title {
+    margin: 44px 0px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.17;
+    letter-spacing: 0.46px;
+  }
+  &-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px 16px
+  }
+
+  .sub-title{
+    color: rgba(60, 60, 67, 0.6);
+    font-size: 12px;
+    padding-bottom: 1px;
+    margin: 10px;
+  }
+}
+
+.recommended-section {
+  max-width: 672px;
+  margin: auto;
+  width: 100%;
+  &-title{
+    margin: 44px 0px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.17;
+    letter-spacing: 0.46px;
+  }
+
+  .recommended-main {
+    padding: 0px 16px;
+    border-radius: 8px;
+    background-color: white;
+  }
+}
+
+.leaderboard-section {
+  max-width: 672px;
+  margin: auto;
+
+  &-title{
+    margin: 44px 0px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.17;
+    letter-spacing: 0.46px;
+  }
+  .leaderboard-list {
+background-color: #efeff4;
+display: flex;
+position: relative;
+list-style: none;
+padding: 0;
+justify-content: space-between;
+padding: 40px 0px;
+overflow: auto;
+
+.leaderboard-card {
+  &-title {
+    text-align: center;
+  }
+  background-color: white;
+  border-radius: 15px;
+  margin: 0px 12px;
+  padding: 0px 16px;
+  width: calc(100%/3 - 16px);
+
+  .leaderboard-date {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: grey;
+    margin-bottom: 16px;
+    padding: 5px;
+    padding-left: 15px;
+  }
+  .leaderboard-rank {
+    font-size: 12px;
+    line-height: 16px;
+    color: black;
+    text-align: center;
+    margin: 14PX;
+  }
+
+}
+  }
+}
+
+@media only screen and (max-width:800px){
+    .recommended-section{
+      .recommended-main{
+        margin: 0px 20px;
+      }
+      .recommended-section-title{
+        margin: 20px 20px;
+      }
+    }
+
+    .program-tasks-section-content {
+      margin: 0px 20px;
+    }
+
+    .program-tasks-section-title {
+      margin: 20px 20px ;
+    }
+
+  }
+
+.list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+
+  &-item {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(198, 198, 200, 0.5);
+    cursor: pointer;
+  }
+
+  li:nth-child(4) .list-item{
+border-bottom: 0px;
+  }
+
+}
+
+.list-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-inline-end: 10px;
+
+  &-caption {
+    color: #6d6d71;
+    font-size: 12px;
+    margin: 10px;
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    margin: 10px;
+  }
+}
+
+.list-coll-image {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    margin: 20px 0px;
+
+    img{
+width: 100%;
+border-radius: 4px;
+    }
+}
+

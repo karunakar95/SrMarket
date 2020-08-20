@@ -1,0 +1,27 @@
+.content-page-body {
+  max-width: 672px;
+  margin: auto;
+
+  .table-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+
+    table {
+      width: 100%;
+    }
+  }
+
+  th {
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+  }
+
+  tr:nth-child(odd) {
+        background-color: gray;
+
+
+
+  }
+}

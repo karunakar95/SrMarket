@@ -1,0 +1,23 @@
+<div class="content-page-wrapper">
+  <div class="content-page-header">
+    <div class="content-page-title">
+      <h3>Profile</h3>
+    </div>
+  </div>
+  <div class="content-page-body">
+    <section class="profile-details">
+      <div class="profile-image">
+       <div class="profile-initials">KY</div>
+      </div>
+      <div class="profile-name">Karunakar</div>
+    </section>
+    <section class="profile-list-section">
+      <div class="profile-list">
+        <ul href="" class="profile-list-tile" *ngFor="let listItem of listItems">
+        <li>{{listItem.title}}</li>
+        </ul>
+      </div>
+
+    </section>
+  </div>
+</div>

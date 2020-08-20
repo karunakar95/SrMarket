@@ -1,0 +1,71 @@
+.content-page-wrapper {
+  background-color: #efeff4;
+  min-height: calc(100vh - 160px);
+  max-width: none;
+
+  .content-page-header {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding-top: 20px;
+    max-width: 672px;
+    margin: auto;
+
+    .content-page-title {
+      font-size: 34px;
+      line-height: 41px;
+      //padding-bottom: 17px;
+      margin: 0;
+      transition: all 150ms;
+    }
+  }
+
+  .content-page-body {
+    .profile-details {
+    max-width: 672px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .profile-image {
+      height: 88px;
+      width: 88px;
+      background-image: linear-gradient(to bottom, #b6b9c3, #b5b8c2 3%, #b3b6c0 5%, #b0b3bd 8%, #acafb9 11%, #a7abb5 15%, #a3a6b0 20%, #9ea1ac 25%, #999da7 32%, #9498a2 39%, #90949e 48%, #8d919a 59%, #8a8e97 71%, #888c95 84%, #878b94);
+      color:white;
+      border-radius: 50%;
+      .profile-initials {
+        text-align: center;
+        font-size: 35px;
+        top: 25px;
+        position: relative;
+       // background-image: linear-gradient(to bottom, #b6b9c3, #b5b8c2 3%, #b3b6c0 5%, #b0b3bd 8%, #acafb9 11%, #a7abb5 15%, #a3a6b0 20%, #9ea1ac 25%, #999da7 32%, #9498a2 39%, #90949e 48%, #8d919a 59%, #8a8e97 71%, #888c95 84%, #878b94);
+      }
+    }
+    .profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    margin: 16px 0px 25px;
+    }
+    }
+    .profile-list-section {
+      max-width: 672px;
+      margin: auto;
+      background-color: white;
+      border-radius: 13px;
+      .profile-list {
+        .profile-list-tile {
+          padding: 19px;
+          margin: 0;
+          font-size: 17px;
+          font-weight: normal;
+          line-height: 22px;
+          color: #000000;
+          text-align: inherit;
+          list-style: none;
+          border-bottom: 1px solid rgba(198, 198, 200, 0.5);
+        }
+      }
+    }
+  }
+  }

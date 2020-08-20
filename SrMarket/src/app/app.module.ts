@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CoreModule } from './core/core.module';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './home/login/login.component';
 import { ProductsComponent } from './home/products/products.component';
 import { DealsComponent } from './home/deals/deals.component';
+import { ParentComponent } from './home/parent/parent.component';
+import { ChildComponent } from './home/child/child.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './home/about/about.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { DiscoverSpotlightsComponent } from './home/discover-spotlights/discover-spotlights.component';
+import { MiscComponent } from './home/misc/misc.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +25,24 @@ import { DealsComponent } from './home/deals/deals.component';
     HomeComponent,
     LoginComponent,
     ProductsComponent,
-    DealsComponent
+    DealsComponent,
+    ParentComponent,
+    ChildComponent,
+    AboutComponent,
+    ContactComponent,
+    DiscoverSpotlightsComponent,
+    MiscComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

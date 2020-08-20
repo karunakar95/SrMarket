@@ -2,9 +2,9 @@
   <app-topnav></app-topnav>
 <main class="page-content">
 <router-outlet></router-outlet>
-<p>---Sorting---</p>
+<!-- <p>---Sorting---</p> -->
 
-  <table [ngStyle]= "{'border':'1px solid black'}">
+  <!-- <table [ngStyle]= "{'border':'1px solid black'}">
     <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByName(arr)">Name:</th>
     <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByAge(arr)">Age:</th>
     <th [ngStyle]="{'cursor' : 'pointer'}" (click)= "sortByDob(arr)">Dob:</th>
@@ -12,12 +12,12 @@
         <td [ngStyle]= "{'border': '1px solid black'}"> <div *ngFor="let item of arr">{{item.age}}</div> </td>
         <td [ngStyle]= "{'border': '1px solid black'}"> <div *ngFor="let item of arr">{{item.dob}}</div>
   </tr>
-      </table>
+      </table> -->
 
     <!-- <span> {{item.name}}</span> &nbsp;,
     <span>{{item.age}}</span> &nbsp;,
   <span>{{item.dob}}</span> &nbsp; -->
-
+<app-parent [dataToParent] = "dataToParent"></app-parent>
 
 
 </main>

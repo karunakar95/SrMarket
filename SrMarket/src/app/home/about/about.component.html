@@ -1,0 +1,26 @@
+<div class="content-page-wrapper">
+  <div class="content-page-header">
+    <div class="content-page-title">
+      <h3>Saved Content</h3>
+    </div>
+  </div>
+  <div class="content-page-body">
+    <section class="saved-content-section">
+      <div class="saved-content-list">
+        <li href="" class="saved-content-list-item" *ngFor="let savedItem of savedContent">
+          <div class="saved-item-content">
+            <h2 class="saved-item-content-title">
+              {{savedItem.title}}
+            </h2>
+            <div class="time-and-competed">
+              <small>3min</small>. <span>completed</span>
+            </div>
+          </div>
+          <div class="saved-item-image">
+            <img src="{{savedItem.imageUrl}}" alt="saved-image">
+          </div>
+        </li>
+      </div>
+    </section>
+  </div>
+</div>

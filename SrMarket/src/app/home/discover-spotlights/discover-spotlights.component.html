@@ -1,0 +1,22 @@
+<div class="content-page-wrapper">
+  <div class="content-page-header">
+    <div class="content-page-title">
+      <h3>Spotlights</h3>
+    </div>
+  </div>
+  <div class="content-page-body">
+    <section class="spotlights-section">
+      <ul class="spotlight-list">
+       <div *ngFor="let spotlight of spotlightList" class="spotlight-card">
+         <div class="spotlight-image">
+         <img src="{{spotlight.imageUrl}}" alt="">
+         </div>
+         <div class="spotlight-contents">
+         <small class="eyebrow">{{spotlight.description}}</small>
+         <p class="title">{{spotlight.title}}</p>
+         </div>
+        </div>
+      </ul>
+    </section>
+  </div>
+</div>
